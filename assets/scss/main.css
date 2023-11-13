@@ -1,0 +1,25 @@
+html body header {
+  background-color: #ec3323;
+}
+html body header .header-pc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0;
+}
+html body header .header-pc .logo-header a img {
+  height: 42px;
+}
+html body header .header-pc .menu-header {
+  flex: 1;
+  max-width: 60%;
+}
+html body header .header-pc .menu-header .list-menu {
+  display: flex;
+  justify-content: space-between;
+}
+html body header .header-pc .menu-header .list-menu li a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}/*# sourceMappingURL=main.css.map */

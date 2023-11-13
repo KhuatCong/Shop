@@ -1,0 +1,39 @@
+html{
+    body{
+        header{
+            background-color: #ec3323;
+            .header-pc{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 0;
+
+                .logo-header{
+                    a{
+                        img{
+                            height: 42px;
+                        }
+                    }
+                }
+
+                .menu-header{
+                    flex: 1;
+                    max-width: 60%;
+                    .list-menu{
+                        display: flex;
+                        justify-content: space-between;
+                        li{
+                            a{
+                                color: #ffffff;
+                                font: {
+                                    size: 16px;
+                                    weight: 500;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
