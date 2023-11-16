@@ -1,38 +1,113 @@
 html{
     body{
+        background-color: bisque;
+        font-family: 'Roboto', sans-serif;
         header{
-            background-color: #ec3323;
+            background-color: gray;
             .header-pc{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 0px 0;
+                padding: 8px 0;
+                .left-header{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
 
-                .logo-header{
-                    a{
-                        img{
-                            height: 42px;
-                        }
-                    }
-                }
-
-                .menu-header{
-                    flex: 1;
-                    max-width: 60%;
-                    .list-menu{
-                        display: flex;
-                        justify-content: space-between;
-                        li{
-                            a{
-                                color: #ffffff;
-                                font: {
-                                    size: 16px;
-                                    weight: 500;
-                                }
+                    .logo-header{
+                        a{
+                            img{
+                                height: 44px;
                             }
                         }
                     }
+
+                    .menu-header{
+                        margin-left: 40px;
+                        .list-menu{
+                            display: flex;
+                            flex-wrap: wrap;
+                            li{
+                                margin: 0px 20px;
+                                a{
+                                    color: #ffffff;
+                                    font: {
+                                        size: 16px;
+                                        weight: 400;
+                                    }
+
+                                    &:hover{
+                                        border-bottom: 3px solid #ffffff;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                        @media screen and (max-width:993px) {
+                            display: none;
+                        }
+                    }
                 }
+                .right-header{
+                    .search-header{
+                            cursor: pointer;
+                            color: #ffffff;
+                            background-color: #f7931e;
+                            border-radius: 50%;
+                            padding: 6px 10px;
+                            transition: 0.3s;
+
+                            &:hover{
+                                background-color: #7ac943;
+                                transition: 0.3s;
+                                box-shadow: #ffffff 0px 10px 40px;
+                            }
+                        
+                    }
+                    @media screen and (max-width:992px) {
+                        display: none;
+                    }
+                }
+                .open-menu-mobile{
+                    color: #ffffff;
+                    cursor: pointer;
+                    display: none;
+
+                    @media screen and (max-width:992px) {
+                        display: block;
+                    }
+                }  
+            }
+        }
+        .search-model{
+            position: relative;
+            background-color: #ffffff;
+            // padding: 10%;// box-shadow: 0 2px 20px 1px rgb(217, 217, 217);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+            width: 100%;
+            height: 0;
+            position: fixed;
+            top: 0;
+            overflow: hidden;
+            transition: 0.3s;
+            .form-search{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                label{
+                    font: {
+                        size: 30px;
+                        weight: 400;
+                    }
+                }
+            }
+            .close-search{
+                position: absolute;
+                top:10px;
+                right: 5%;
+                cursor: pointer;
             }
         }
     }
